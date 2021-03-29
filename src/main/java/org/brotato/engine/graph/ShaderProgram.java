@@ -4,9 +4,7 @@ import static org.lwjgl.opengl.GL20.*;
 
 public class ShaderProgram {
     private final int programId;
-
     private int vertexShaderId;
-
     private int fragmentShaderId;
 
     public ShaderProgram() throws Exception {
@@ -57,9 +55,8 @@ public class ShaderProgram {
 
         glValidateProgram(programId);
         if (glGetProgrami(programId, GL_VALIDATE_STATUS) == 0) {
-            System.err.println("Warning validating Shader code: " + glGetProgramInfoLog(programId, 1024));
+            System.out.println("Warning validating Shader code: " + glGetProgramInfoLog(programId, 1024));
         }
-
     }
 
     public void bind() {

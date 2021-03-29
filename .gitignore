@@ -8,6 +8,8 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 *.class
-.idea/**
 *.iml
 *.lst
+*.jar
+#idea folder
+.idea/
